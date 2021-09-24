@@ -37,35 +37,35 @@ Route::middleware('auth:api')->post('/search',[App\Http\Controllers\APIControlle
 // Courses
 Route::middleware(['auth:api'])->group(function () {
     // To get Most Popular Courses
-    Route::post('/most-popular-courses',[App\Http\Controllers\APIController::class, 'getMostPopular']); 
+    Route::get('/most-popular-courses',[App\Http\Controllers\APIController::class, 'getMostPopular']); 
 
     // To get Similar Courses
-    Route::post('/get-similar-courses',[App\Http\Controllers\APIController::class, 'getSimilar']);
+    Route::get('/get-similar-courses',[App\Http\Controllers\APIController::class, 'getSimilar']);
     
     // To get My Courses
-    Route::post('/get-my-courses',[App\Http\Controllers\APIController::class, 'getMyCourses']);
+    Route::get('/get-my-courses',[App\Http\Controllers\APIController::class, 'getMyCourses']);
 
     // To get Courses of the Same Interests
-    Route::post('/get-same-interest-courses',[App\Http\Controllers\APIController::class, 'getSameInterests']);
+    Route::get('/get-same-interest-courses',[App\Http\Controllers\APIController::class, 'getSameInterests']);
 
     // Get a Course
-    Route::post('/get-course',[App\Http\Controllers\APIController::class, 'getCourse']);
+    Route::get('/get-course',[App\Http\Controllers\APIController::class, 'getCourse']);
 });
 
 
 // Interests
 Route::middleware(['auth:api'])->group(function () {
     // To get all Interests
-    Route::post('/get-all-interests',[App\Http\Controllers\APIController::class, 'getAllInterests']);
+    Route::get('/get-all-interests',[App\Http\Controllers\APIController::class, 'getAllInterests']);
 
     // To get an Interests
-    Route::post('/get-interests',[App\Http\Controllers\APIController::class, 'getInterest']); 
+    Route::get('/get-interests',[App\Http\Controllers\APIController::class, 'getInterest']); 
 
     // To get a Course Interests
-    Route::post('/get-course-interests',[App\Http\Controllers\APIController::class, 'getCourseInterests']);
+    Route::get('/get-course-interests',[App\Http\Controllers\APIController::class, 'getCourseInterests']);
 
     // To get user Interests
-    Route::post('/get-my-interests',[App\Http\Controllers\APIController::class, 'getMyInterest']); 
+    Route::get('/get-my-interests',[App\Http\Controllers\APIController::class, 'getMyInterest']); 
 
 });
 
@@ -76,7 +76,7 @@ Route::middleware(['auth:api'])->group(function () {
 
     Route::post('/unfollow-course',[App\Http\Controllers\APIController::class, 'unfollowCourse']);
 
-    Route::post('/check-course',[App\Http\Controllers\APIController::class, 'checkCourse']);
+    Route::get('/check-course',[App\Http\Controllers\APIController::class, 'checkCourse']);
 
     Route::post('/increase-course',[App\Http\Controllers\APIController::class, 'viewIncrease']);
 
@@ -85,16 +85,16 @@ Route::middleware(['auth:api'])->group(function () {
     Route::post('/pass-update',[App\Http\Controllers\APIController::class, 'updatePass']);
 
     // To get all Interests
-    Route::post('/get-all-interests',[App\Http\Controllers\APIController::class, 'getAllInterests']);
+    Route::get('/get-all-interests',[App\Http\Controllers\APIController::class, 'getAllInterests']);
 
     // To get an Interests
-    Route::post('/get-interests',[App\Http\Controllers\APIController::class, 'getInterest']); 
+    Route::get('/get-interests',[App\Http\Controllers\APIController::class, 'getInterest']); 
 
     // To get a Course Interests
-    Route::post('/get-course-interests',[App\Http\Controllers\APIController::class, 'getCourseInterests']);
+    Route::get('/get-course-interests',[App\Http\Controllers\APIController::class, 'getCourseInterests']);
 
     // To get my Interests
-    Route::post('/get-my-interests',[App\Http\Controllers\APIController::class, 'getMyInterests']);
+    Route::get('/get-my-interests',[App\Http\Controllers\APIController::class, 'getMyInterests']);
 
     // To mdifiy my Interests
     Route::post('/modify-my-interests',[App\Http\Controllers\APIController::class, 'modifyMyInterests']);
